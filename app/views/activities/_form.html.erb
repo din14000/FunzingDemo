@@ -1,0 +1,56 @@
+
+<%= form_with model: activity do |f| %>
+
+  <div class="form-inputs">
+
+    <div class="form-group">
+      <%= f.label :title, class: 'col-form-label col-auto' %>
+      <div class="col">
+        <%= f.text_field :title, class:'form-control', placeholder:'Minimum 5 lettes' %>
+      </div>
+    </div>
+
+     <div class="form-group">
+      <%= f.label :date, class: 'col-form-label col-auto' %>
+      <div class="col">
+        <%= f.date_field :date, class:'form-control'%>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :description, class: 'col-form-label col-auto' %>
+      <div class="col">
+        <%= f.rich_text_area :description, class:'form-control', placeholder:'Add an intersting description to your activity!' %>
+      </div>
+    </div>  
+
+    <div class="form-group">
+      <%= f.label :max_attendees,'Maximum amount of attendees', class:'col-form-label col-auto' %>
+      <div class="col">
+        <%= f.number_field :max_attendees, class: 'form-control-range' %>
+      </div>
+    </div>
+
+        <div class="form-group">
+      <%= f.label :ticket_price,'Price per ticket', class:'col-form-label col-auto' %>
+      <div class="col">
+        <%= f.number_field :ticket_price, class: 'form-control-range' %>
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <div class="col">
+        <%= f.label :thumbnail, 'Pick a picture for your activity!', class: 'form-control-file' %>
+        <%= f.file_field :thumbnail %>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <div class="col">
+        <%= f.button :submit, class:'btn btn-primary' %>
+      </div>
+    </div>
+
+  </div>
+<% end %>

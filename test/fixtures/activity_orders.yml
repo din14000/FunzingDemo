@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tickets_purchased: 1
+  total_price: 1
+  activity: one
+  order: one
+
+two:
+  tickets_purchased: 1
+  total_price: 1
+  activity: two
+  order: two

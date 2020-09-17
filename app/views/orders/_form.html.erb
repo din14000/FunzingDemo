@@ -1,0 +1,55 @@
+
+<div class="container">
+
+  <h1 class="display-4">
+    <%= @order.activity.title %>
+  </h1>
+  
+  <h1 class="display">
+    <%= @activity.date %>
+  </h1>
+
+  <h1 class="display">
+    Only <%= pluralize(@order.activity.tickets_left, 
+        "Ticket") %> left!
+  </h1>
+    <h1 class="d-inline">
+    Ticket price: <%= @order.activity.ticket_price %>$
+  </h1>
+
+
+  <div class="form-container">
+
+    <%= form_with model: order do |f| %>
+
+      <div class="form-inputs">
+
+        <div class="form-group">
+          <%= f.label :number_of_tickets,'How many tickets would you like to purchase?', class:'col-form-label col-auto' %>
+          <div class="col">
+            <%= f.number_field :number_of_tickets, min: 1, max: @activity.tickets_left, class: 'form-control-range' %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <%= f.hidden_field :activity_id, :value => @order.activity.id %>
+        </div>
+
+        <div class="form-group form-inline ml-3">
+          <div class="form-actions form-actions-inline">
+            <%= f.button :submit, class:'btn btn-primary' %>
+          </div>
+          
+        </div>
+
+      </div>
+
+    <% end %>
+    
+
+
+  </div>
+
+
+</div>
+

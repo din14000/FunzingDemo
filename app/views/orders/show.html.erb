@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+
+     <h1 class="display-4"> <%= @order.activity.title %> </h1>
+      
+    <p class="lead">Order number:
+      <%= @order.id %>
+    </p>
+
+   <p class="lead">Activity date:
+      <%= @order.activity.date %>
+    </p>
+
+    <p class="lead">Activity owner:
+      <%= @order.activity.owner %>
+    </p>
+
+    <p class="lead">Number of tickets ordered:
+      <%= @order.number_of_tickets %>
+    </p>
+
+    
+    <p class="lead">Total order price:
+      <%= @order.total_order_price %>
+    </p>
+
+  <a class="btn btn-primary btn-lg" href="<%= orders_path %>" role="button">Show all orders</a>
+
+    
+  </div>
+</div>

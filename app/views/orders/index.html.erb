@@ -1,0 +1,30 @@
+<h1 class="card-body">Your orders</h1>
+    <% @orders.each do |order| %>
+        <div class="container">
+          <div class="card mb-3">
+            <div class="row no-gutters">
+              <div class="col">
+                <% if order.activity.thumbnail.attached?  %>
+                  <img class="card-img"
+                  src= "<%= url_for order.activity.thumbnail %>"
+                  />
+                <% end %>
+              </div>
+                <div class="col">
+                  <div class="card-body">
+                    <p class="card-text"> Activity no: <%= order.activity.id %> </p>
+                      <h5 class="card-title">
+                          <%= link_to order.activity.title, order %>
+                      </h5>
+                      <p class="card-text"> Bought at: <%= order.created_at %> </p>
+                      <p class="card-text"> Published by: <%= order.activity.owner %> </p>
+                      <p class="card-text"> Date: <%= order.activity.date %> </p>
+                      <p class="card-text"> Tickets bought: <%= order.number_of_tickets %> </p>
+                      <p class="card-text"> Total order price: <%= order.total_order_price %> </p>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </div>
+    <% end %>
+

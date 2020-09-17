@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+<div class="jumbotron">
+  <h1 class="display-4">Hello! my name is Din</h1>
+  <p class="lead">And this is my mini-Funzing project</p>
+  <hr class="my-4">
+  <% if !current_user %>
+    <p>Please sign in or register if you are new here!</p>
+    <a class="btn btn-outline-primary btn-lg" href="<%=new_user_registration_path%>" role="button">Register</a>
+    <a class="btn btn-outline-success btn-lg" href="<%= new_user_session_path %>" role="button">Signin</a>
+    <% end %>
+  <p>Check out all our activities!</p>
+  <a class="btn btn-outline-primary btn-lg" href="<%= activities_path %>" role="button">Activities</a>
+
+</div>
+</div>

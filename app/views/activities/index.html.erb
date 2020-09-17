@@ -1,0 +1,35 @@
+<h1 class="card-body">Our Activities</h1>
+
+<div class="container">
+    <div class="row mb-3">
+        <div class="digg_pagination">
+            <%= will_paginate @activities, :containter => false %>
+        </div>
+    </div>
+
+    <% @activities.each do |activity| %>
+    <% if activity.tickets_left > 0 %>
+            <div class="row">
+                <div class="card mb-3">
+                  <% if activity.thumbnail.attached?  %>
+                      <img class="card-img-top"
+                      src= "<%= url_for activity.optimized_image(activity.thumbnail, 586, 180) %>"
+                      />
+                    <% end %>
+                    <div class="card-body">
+                        <h5 class="card-body">
+                            <%= link_to activity.title, activity %>
+                        </h5>
+                        <p class="card-text"> <%= activity.description.to_plain_text.truncate_words(25) %> 
+                        </p>
+                        <p class="card-text"> 
+                            <small class="text-muted"> Published at <%= activity.updated_at.strftime("%b %e %a") %> | by
+                             <%= activity.owner %> | <%= pluralize(activity.tickets_left, "Ticket") %> left!
+                            </small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+    <% end %>
+        <% end %>
+</div>
