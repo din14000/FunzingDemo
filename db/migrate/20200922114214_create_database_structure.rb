@@ -68,6 +68,5 @@ class CreateDatabaseStructure < ActiveRecord::Migration[6.0]
     add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
     add_foreign_key "orders", "activities"
     add_foreign_key "orders", "users"
-    end
   end
 end
