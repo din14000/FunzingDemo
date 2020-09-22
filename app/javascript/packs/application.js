@@ -3,8 +3,6 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-import "bootstrap"
-import './app/assets/stylesheets/application.scss'
 require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
@@ -18,3 +16,5 @@ require("channels")
 // const imagePath = (name) => images(name, true)
 require("trix")
 require("@rails/actiontext")
+
+import 'bootstrap'
