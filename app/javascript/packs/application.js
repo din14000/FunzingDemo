@@ -21,3 +21,4 @@ require("@rails/actiontext")
 //= require popper
 //= require bootstrap
 import 'bootstrap'
+import '../stylesheets/style'
