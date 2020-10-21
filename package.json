@@ -28,7 +28,9 @@
   },
   "description": "My webpack project",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "start": "rails server",
+    "heroku-postbuild": "webpack -p"
   },
   "main": "babel.config.js",
   "directories": {
