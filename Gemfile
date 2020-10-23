@@ -29,7 +29,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootstrap', '~> 5.0.0.alpha1'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'jquery-rails'
-
+gem 'mini_racer', platforms: :ruby
 gem 'devise'
 gem 'simple_form'
 gem 'faker'
