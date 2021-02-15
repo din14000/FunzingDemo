@@ -1,4 +1,4 @@
-# 🚀 Welcome to your new awesome project!
+# 🚀 Welcome to my awesome Funzing mini-project!
 
 This project has been created using **webpack scaffold**, you can now run
 
@@ -13,3 +13,5 @@ yarn build
 ```
 
 to bundle your application
+
+Also, this app is up and running on Heroku! - https://dins-funzing-project.herokuapp.com/
